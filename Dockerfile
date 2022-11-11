@@ -1,9 +1,9 @@
-FROM python:3.8.13-slim-buster
-RUN mkdir -p /api
-COPY . main.py /api/
-WORKDIR /api
-RUN pip install -r requirements.txt
-# RUN python -m textblob.download_corpora
-EXPOSE 8080
-CMD [ "main.py" ]
-ENTRYPOINT [ "python" ]
+FROM tiangolo/uvicorn-gunicorn-fastapi:python3.9
+
+WORKDIR /code
+
+COPY . /code
+
+RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
+
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]

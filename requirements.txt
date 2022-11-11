@@ -7,3 +7,5 @@ fire
 fastapi
 uvicorn
 textblob
+git+https://github.com/LIAAD/yake
+pydantic
