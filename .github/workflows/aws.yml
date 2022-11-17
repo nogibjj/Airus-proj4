@@ -68,6 +68,7 @@ jobs:
       id: build-image
       env:
         ECR_REGISTRY: 954946645007.dkr.ecr.us-east-1.amazonaws.com
+        ECR_REPOSITORY: fastapi
         IMAGE_TAG: latest
       run: |
         # Build a docker container and
