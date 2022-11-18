@@ -7,7 +7,6 @@
 #    For example: `aws ecr create-repository --repository-name my-ecr-repo --region us-east-2`.
 #    Replace the value of the `ECR_REPOSITORY` environment variable in the workflow below with your repository's name.
 #    Replace the value of the `AWS_REGION` environment variable in the workflow below with your repository's region.
-#
 
 # 2. Store an IAM user access key in GitHub Actions secrets named `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`.
 #    See the documentation for each action used below for the recommended IAM policies for this IAM user,
