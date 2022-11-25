@@ -5,17 +5,15 @@ import uvicorn
 app = FastAPI()
 
 
-class Wiki(BaseModel):
-    name: str
-
-
 @app.get("/")
 async def root():
     """Home Page with GET HTTP Method"""
 
     return {"message": "Hello FastAPI With Continuous Delivery ECR"}
 
-
+@app.get('/index')
+def index():
+    return 'Hello world!'
 
 
 if __name__ == "__main__":
