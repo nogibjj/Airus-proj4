@@ -16,5 +16,8 @@ def test_index(client):
 
    res3=client.get('/blog/{id}')
    assert res2.status_code == 200
+ 
+   res4=client.get('/blog/{id}/comments')
+   assert res4.status_code == 422
 
 
