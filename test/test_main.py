@@ -8,6 +8,13 @@ def client():
     yield client
     
 def test_index(client):
-    res = client.get('/index')
-    assert res.status_code == 200
-    assert res.text == '"Hello world!"'
+   res = client.get('/blog')
+   assert res.status_code == 200
+
+   res2=client.get("/")
+   assert res2.status_code == 200
+
+   res3=client.get('/blog/{id}')
+   assert res2.status_code == 200
+
+
